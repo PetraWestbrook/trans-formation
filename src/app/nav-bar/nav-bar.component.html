@@ -1,8 +1,30 @@
 <mat-toolbar color='primary'>
   <mat-toolbar-row>
+
     <button mat-icon-button>
-      <mat-icon (click)='sidenav.toggle()'>menu</mat-icon>
+      <mat-icon>home</mat-icon>
     </button>
+
+    <button mat-button [matMenuTriggerFor]="about">About</button>
+
+    <mat-menu #about="matMenu">
+      <button mat-menu-item>Mission Statement</button>
+      <button mat-menu-item>Contact</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="educateYourself">Educate Yourself</button>
+
+    <mat-menu #educateYourself="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="transInfo">Transgender Info</button>
+      <button mat-menu-item>Be A Better Ally</button>
+      <button mat-menu-item>Glossary</button>
+    </mat-menu>
+
+    <mat-menu #transInfo="matMenu">
+      <button mat-menu-item>Transgender Men</button>
+      <button mat-menu-item>Transgender Women</button>
+      <button mat-menu-item>Non-binary Folk</button>
+    </mat-menu>
+
   </mat-toolbar-row>
 </mat-toolbar>
-
