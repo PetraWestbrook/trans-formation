@@ -26,5 +26,27 @@
       <button mat-menu-item>Non-binary Folk</button>
     </mat-menu>
 
+    <button mat-button [matMenuTriggerFor]="safeSpaces">Safe Spaces</button>
+
+    <mat-menu #safeSpaces="matMenu">
+      <button mat-menu-item>IRL Support Groups</button>
+      <button mat-menu-item>Online Communities</button>
+      <button mat-menu-item>LGBTQ+ Friendly Companies</button>
+      <button mat-menu-item>Bathroom Finder</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="medicalProviders">Medical Providers</button>
+
+    <mat-menu #medicalProviders="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="primaryPhysician">Primary Physician</button>
+      <button mat-menu-item>Mental Healthcare Providers</button>
+      <button mat-menu-item>Plastic Surgeons</button>
+    </mat-menu>
+
+    <mat-menu #primaryPhysician="matMenu">
+      <button mat-menu-item>Informed Consent Providers</button>
+      <button mat-menu-item>Other Providers</button>
+    </mat-menu>
+
   </mat-toolbar-row>
 </mat-toolbar>
